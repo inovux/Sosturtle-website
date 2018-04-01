@@ -1,0 +1,30 @@
+$color-primary: #008CBE;
+$color-secondary: #23CF5F;
+
+$color-grey-light-1: #9AA8B6;
+$color-grey-dark-1: #3E4C5B;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(2, max-content);
+  grid-template-columns: [full-start] minmax(50px, 10vw) [center-start] repeat(2, 1fr) [center-end] minmax(50px, 10vw) [full-end]
+}

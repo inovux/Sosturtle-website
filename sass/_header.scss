@@ -1,0 +1,83 @@
+.header {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, rgba($color-primary, .95), transparent 30%), url(../img/turtle.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-row: 1 / span 1;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: 10rem 1fr max-content;
+  grid-template-columns: repeat(2, minmax(6.5vw, 12.5rem)) minmax(max-content, 1fr) repeat(2, minmax(6.5vw, 12.5rem));
+
+  &__logo {
+    grid-column: 1 / span 2;
+    width: 100%;
+    max-width: 18.3rem;
+    align-self: center;
+    justify-self: center;
+  }
+
+  & .nav {
+    grid-column: 3 / span 1;
+    align-self: center;
+    justify-self: center;
+
+    &__item {
+      list-style: none;
+      display: inline-block;
+
+      &:not(:last-child) {
+        padding-right: 3rem;
+      }
+    }
+
+    &__link {
+      font-size: 1.4rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all .2s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__icon-links {
+    grid-column: 5 / span 1;
+  }
+
+  &__text {
+    grid-column: 3 / span 1;
+    align-self: center;
+  }
+
+  &__heading-1 {
+    font-size: 8rem;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &__heading-3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+  }
+
+  &__social-icons {
+    grid-column: 1 / span 1;
+    justify-self: center;
+    padding-bottom: 7.8rem;
+  }
+
+  &__donation {
+    grid-column: 2 / span 3;
+  }
+}
