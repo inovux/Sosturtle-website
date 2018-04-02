@@ -1,14 +1,14 @@
 .header {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(to bottom right, rgba($color-primary, .95), transparent 30%), url(../img/turtle.jpg);
+  background-image: linear-gradient(to bottom right, rgba($color-primary, .95), transparent), url(../img/turtle.jpg);
   background-size: cover;
   background-position: center;
   grid-row: 1 / span 1;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-rows: 10rem 1fr max-content;
-  grid-template-columns: repeat(2, minmax(6.5vw, 12.5rem)) minmax(max-content, 1fr) repeat(2, minmax(6.5vw, 12.5rem));
+  grid-template-columns: repeat(2, 6.5vw) 1fr repeat(2, 6.5vw);
 
   &__logo {
     grid-column: 1 / span 2;
@@ -16,6 +16,7 @@
     max-width: 18.3rem;
     align-self: center;
     justify-self: center;
+    padding-left: 3rem;
   }
 
   & .nav {
@@ -40,7 +41,7 @@
       transition: all .2s;
 
       &:hover {
-        color: $color-primary;
+        color: $color-secondary;
       }
     }
   }
@@ -68,6 +69,13 @@
     padding-top: 3.5rem;
   }
 
+  &__heading-4 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: $color-grey-dark-1;
+    margin: 0 2rem;
+  }
+
   &__paragraph--head {
     font-size: 2.2rem;
     font-weight: 500;
@@ -82,10 +90,37 @@
   &__social-icons {
     grid-column: 1 / span 1;
     justify-self: center;
-    padding-bottom: 7.8rem;
+    margin-bottom: 7.8rem;
+  }
+
+  &__social-icons a {
+    display: block;
   }
 
   &__donation {
     grid-column: 2 / span 3;
+    background-color: #fff;
+    margin-bottom: 7.8rem;
+    padding: 1rem;
+  }
+
+  &__amount,
+  &__period {
+    margin: 0 2rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__btn {
+    height: 10rem;
+    border: none;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    justify-self: stretch;
   }
 }

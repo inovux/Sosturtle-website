@@ -28,3 +28,8 @@ body {
   grid-template-rows: 100vh repeat(2, max-content);
   grid-template-columns: [full-start] minmax(50px, 10vw) [center-start] repeat(2, 1fr) [center-end] minmax(50px, 10vw) [full-end]
 }
+
+.btn-secondary {
+  background-color: $color-secondary;
+  color: #fff;
+}

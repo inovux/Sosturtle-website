@@ -19,23 +19,28 @@ body {
   grid-template-rows: 100vh repeat(2, max-content);
   grid-template-columns: [full-start] minmax(50px, 10vw) [center-start] repeat(2, 1fr) [center-end] minmax(50px, 10vw) [full-end]; }
 
+.btn-secondary {
+  background-color: #23CF5F;
+  color: #fff; }
+
 .header {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(to bottom right, rgba(0, 140, 190, 0.95), transparent 30%), url(../img/turtle.jpg);
+  background-image: linear-gradient(to bottom right, rgba(0, 140, 190, 0.95), transparent), url(../img/turtle.jpg);
   background-size: cover;
   background-position: center;
   grid-row: 1 / span 1;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-rows: 10rem 1fr max-content;
-  grid-template-columns: repeat(2, minmax(6.5vw, 12.5rem)) minmax(max-content, 1fr) repeat(2, minmax(6.5vw, 12.5rem)); }
+  grid-template-columns: repeat(2, 6.5vw) 1fr repeat(2, 6.5vw); }
   .header__logo {
     grid-column: 1 / span 2;
     width: 100%;
     max-width: 18.3rem;
     align-self: center;
-    justify-self: center; }
+    justify-self: center;
+    padding-left: 3rem; }
   .header .nav {
     grid-column: 3 / span 1;
     align-self: center;
@@ -52,7 +57,7 @@ body {
       text-transform: uppercase;
       transition: all .2s; }
       .header .nav__link:hover {
-        color: #008CBE; }
+        color: #23CF5F; }
   .header__icon-links {
     grid-column: 5 / span 1; }
   .header__text {
@@ -68,6 +73,11 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     padding-top: 3.5rem; }
+  .header__heading-4 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #3E4C5B;
+    margin: 0 2rem; }
   .header__paragraph--head {
     font-size: 2.2rem;
     font-weight: 500;
@@ -80,9 +90,27 @@ body {
   .header__social-icons {
     grid-column: 1 / span 1;
     justify-self: center;
-    padding-bottom: 7.8rem; }
+    margin-bottom: 7.8rem; }
+  .header__social-icons a {
+    display: block; }
   .header__donation {
-    grid-column: 2 / span 3; }
+    grid-column: 2 / span 3;
+    background-color: #fff;
+    margin-bottom: 7.8rem;
+    padding: 1rem; }
+  .header__amount, .header__period {
+    margin: 0 2rem; }
+  .header__form {
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    align-items: center;
+    justify-items: center; }
+  .header__btn {
+    height: 10rem;
+    border: none;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    justify-self: stretch; }
 
 .content {
   grid-row: 2 / span 1;
