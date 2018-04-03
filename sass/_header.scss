@@ -48,6 +48,14 @@
 
   &__icon-links {
     grid-column: 5 / span 1;
+    align-self: center;
+  }
+
+  &__icon-link {
+    display: inline-block;
+    &:not(:last-child) {
+      padding-right: 2rem;
+    }
   }
 
   &__text {
@@ -91,10 +99,15 @@
     grid-column: 1 / span 1;
     justify-self: center;
     margin-bottom: 7.8rem;
+    display: grid;
+    align-items: flex-end;
   }
 
   &__social-icons a {
     display: block;
+    &:not(:first-child) {
+      padding-top: 2rem;
+    }
   }
 
   &__donation {
@@ -102,6 +115,8 @@
     background-color: #fff;
     margin-bottom: 7.8rem;
     padding: 1rem;
+    height: 12rem;
+    align-self: center;
   }
 
   &__amount,
@@ -122,5 +137,11 @@
     font-size: 2.2rem;
     text-transform: uppercase;
     justify-self: stretch;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: #fff;
   }
 }
